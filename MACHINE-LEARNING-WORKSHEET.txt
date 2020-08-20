@@ -1,0 +1,119 @@
+                                                                    MACHINE LEARNING
+                                                                      WORKSHEET – 1
+In Q1 to Q7, only one option is correct, Choose the correct option:
+
+1. The value of correlation coefficient will always be:
+A) between 0 and 1 B) greater than -1
+C) between -1 and 1 D) between 0 and -1
+Ans- C
+
+2. Which of the following cannot be used for dimensionality reduction?
+A) Lasso Regularisation B) PCA
+C) Recursive feature elimination D) Ridge Regularisation
+Ans- C
+
+3. Which of the following is not a kernel in Support Vector Machines?
+A) linear B) Radial Basis Function
+C) hyperplane D) polynomial
+Ans-C
+
+4. Amongst the following, which one is least suitable for a dataset having non-linear decision boundaries?
+A) Logistic Regression B) Naïve Bayes Classifier
+C) Decision Tree Classifier D) Support Vector Classifier
+Ans- B
+
+5. In a Linear Regression problem, ‘X’ is independent variable and ‘Y’ is dependent variable, where ‘X’ represents weight in pounds. If you convert the unit of ‘X’ to kilograms, then new coefficient of ‘X’ will be?
+(1 kilogram = 2.205 pounds)
+A) 2.205 × old coefficient of ‘X’  B) same as old coefficient of ‘X’
+C) old coefficient of ‘X’ ÷ 2.205  D) Cannot be determined
+Ans- C
+
+6. As we increase the number of estimators in ADABOOST Classifier, what happens to the accuracy of the model?
+A) remains same B) increases
+C) decreases D) none of the above
+Ans- C
+
+7. Which of the following is not an advantage of using random forest instead of decision trees?
+A) Random Forests reduce overfitting
+B) Random Forests explains more variance in data then decision trees
+C) Random Forests are easy to interpret
+D) Random Forests provide a reliable feature importance estimate
+Ans- A
+
+In Q8 to Q10, more than one options are correct, Choose all the correct options:
+
+8. Which of the following are correct about Principal Components?
+A) Principal Components are calculated using supervised learning techniques
+B) Principal Components are calculated using unsupervised learning techniques
+C) Principal Components are linear combinations of Linear Variables.
+D) All of the above
+Ans- D
+
+9. Which of the following are applications of clustering?
+A) Identifying developed, developing and under-developed countries on the basis of factors like GDP, poverty index, employment rate, population and living index
+B) Identifying loan defaulters in a bank on the basis of previous years’ data of loan accounts.
+C) Identifying spam or ham emails
+D) Identifying different segments of disease based on BMI, blood pressure, cholesterol, blood sugar levels.
+Ans-A,B,C,D
+
+10. Which of the following is(are) hyper parameters of a decision tree?
+A) max_depth B) max_features
+C) n_estimators D) min_samples_leaf
+Ans-A,D
+
+Q10 to Q15 are subjective answer type questions, Answer them briefly.
+
+11. What are outliers? Explain the Inter Quartile Range(IQR) method for outlier detection.
+Ans- An outlier is any data point which differs greatly from the rest of the observations in a dataset.Outliers are of two types such as Univariate and Multivariate. A univariate outlier is a data point that consists of extreme values in one variable only, whereas a multivariate outlier is a combined unusual score on at least two variables.
+Example:- In the scores 25,29,3,32,85,33,27,28 both 3 and 85 are "outliers"
+
+How to detect and remove outliers from our data we using  IQR rule or method. It is also called the midspread and it is being equal to the difference between 75th and 25th percentiles, or between upper and lower quartiles, 
+IQR = Q3− Q1
+Steps to perform Outlier Detection by identifying the lowerbound and upperbound of the data:
+1. Arrange your data in ascending order
+2. Calculate Q1 ( the first Quarter)
+3. Calculate Q3 ( the third Quartile)
+4. Find IQR = (Q3 - Q1)
+5. Find the lower Range = Q1 -(1.5 * IQR)
+6. Find the upper Range = Q3 + (1.5 * IQR)
+
+12. What is the primary difference between bagging and boosting algorithms?
+Ans- Both are the ensemble techniques and used for weak learners where a set of weak learners combined to create strong learners.
+                       Bagging                                                 Boosting
+* Combining predictions that belong                      Combining predictions that belong                      
+  to same type                                                         to different type
+
+* Main focus on decreasing variance                       Focused on decrease bias not variance
+   not bias
+
+* Each model recieve equal weights                       Models recieves weight based on their performance
+
+* It tries to solve over fitting problems                    Tries to reduce bias
+
+* If the classifier is unstable (high variance)            If the classifier is stable and simple (high bias) the apply boosting.
+  then apply bagging.
+           
+* Example- Random Forest                                      Gradient Boosting
+
+                         
+13. What is adjusted R2 in logistic regression. How is it calculated?
+Ans- The adjusted R-squared is a modified version of R-squared that has been adjusted for the number of predictors in the model. The adjusted R-squared increases only if the new term improves the model more than would be expected by chance. It decreases when a predictor improves the model by less than expected by chance.
+Adjusted R-squared value can be calculated based on value of r-squared, number of independent variables (predictors), total sample size.
+adj_rsquared = 1 - (1 - R2) * ((n - 1)/(n-p-1))
+here R2  is sample r squared
+p is no. of predictors
+n is total sample size
+
+14. What is the difference between standardisation and normalisation?
+Ans- These are two of the most commonly used feature scaling techniques in machine learning such as Standardisation and normalization. Normalization usually means to scale a variable to have a values between 0 and 1, while standardisation transforms data to have a mean of zero and a standard deviation of 1.
+In simple words Normalization is a scaling technique in which values are shifted and rescaled so that they end up ranging between 0 and 1. It is also known as Min-Max scaling.
+On the other hand Standardisation is another scaling technique where the values are centered around the mean with a unit standard deviation. This means that the mean of the attribute becomes zero and the resultant distribution has a unit standard deviation or 1. Example- Standard Scaler or Z-score normalization
+
+15. What is cross-validation? Describe one advantage and one disadvantage of using cross-validation?
+Ans- Cross-validation is a technique in which we train our model using the subset of the dataset and then evaluate using the complementary subset of the dataset.
+Steps are:- a)Reserve some portion of sample data-set.
+b)Using the rest data-set train the model.
+c)Test the model using the reserve portion of the data-set.
+
+Advantage:- Reduces overfitting and hyperparameter tuning applicable
+Disadvantage:- Increase training time and expensive computation
